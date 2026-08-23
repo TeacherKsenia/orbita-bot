@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070817">
+  <meta name="description" content="AI Toolkit — six small tools for clearer everyday thinking.">
+  <title>AI Toolkit</title>
+  <link rel="preload" as="image" href="back-desktop.webp" type="image/webp" media="(min-width: 761px)">
+  <link rel="preload" as="image" href="back-mobile.webp" type="image/webp" media="(max-width: 760px)">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="space" aria-hidden="true">
+    <img id="bg" src="back-desktop.webp" alt="" draggable="false">
+  </div>
+  <div class="twinkle-stars" id="twinkleStars" aria-hidden="true"></div>
+  <canvas class="cursor-trail" id="cursorTrail" aria-hidden="true"></canvas>
+  <audio id="ambientAudio" src="orbital-drift.mp3" preload="auto" autoplay loop aria-hidden="true"></audio>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="AI Toolkit home"><span>AI</span> Toolkit</a>
+    <p>A little help when your brain has too many tabs open.</p>
+  </header>
+
+  <main>
+    <section class="orbit-stage" id="orbitStage" aria-label="Choose an AI tool">
+      <div class="orbit-camera" id="orbitCamera">
+        <div class="orbit-system" id="orbitSystem">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="orbit-dot dot-one"></div>
+          <div class="orbit-dot dot-two"></div>
+          <div class="orbit-dot dot-three"></div>
+
+          <div class="core" id="core" aria-hidden="true">
+            <div class="core-inner core-start">
+              <p>What's on your mind?</p>
+              <span>Choose a tool</span>
+            </div>
+          </div>
+
+          <div class="tools" id="tools"></div>
+        </div>
+      </div>
+    </section>
+
+    <button class="sound-toggle" id="soundToggle" type="button" aria-label="Play ambient sound" aria-pressed="false" title="Ambient sound"><span class="sound-icon">♪</span></button>
+    <button class="back-button" id="backButton" type="button"><span>←</span> Back to tools</button>
+
+    <section class="workspace" id="workspace" aria-hidden="true">
+      <div class="work-card">
+        <form id="toolForm">
+          <label id="promptLabel" for="userInput"></label>
+          <div class="textarea-wrap">
+            <textarea id="userInput" maxlength="1200" rows="5" required></textarea>
+            <span class="counter"><b id="charCount">0</b>/1200</span>
+          </div>
+          <button class="generate-button" id="generateButton" type="submit"><span>✦</span> Generate</button>
+        </form>
+
+        <div class="response" id="response" aria-live="polite" hidden>
+        <div class="response-top"><span>Toolkit response</span></div>
+          <div id="responseContent"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="background-frames.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Local secrets
+backend/.env
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local editor and test files
+.vscode/
+.idea/
+.chrome-test*/
+
