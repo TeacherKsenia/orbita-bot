@@ -2,6 +2,10 @@
 backend/.env
 .env
 
+# Personal project notes
+README.md
+HOSTING_PLAN.md
+
 # Python
 __pycache__/
 *.py[cod]
