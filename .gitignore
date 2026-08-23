@@ -5,6 +5,7 @@ backend/.env
 # Personal project notes
 README.md
 HOSTING_PLAN.md
+_local_backup/
 
 # Python
 __pycache__/
