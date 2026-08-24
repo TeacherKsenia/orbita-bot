@@ -31,7 +31,7 @@ const responseLabel = document.querySelector('.response-top span');
 
 // Leave empty for local/same-origin hosting. Add the Timeweb server URL here
 // when the frontend is published separately on GitHub Pages.
-const API_BASE_URL = '';
+const API_BASE_URL = 'https://cx900410.tw1.ru';
 const API_TIMEOUT_MS = 10000;
 
 let active = null;
