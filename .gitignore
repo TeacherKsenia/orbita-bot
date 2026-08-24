@@ -6,6 +6,7 @@ backend/.env
 README.md
 HOSTING_PLAN.md
 _local_backup/
+timeweb-php/
 
 # Python
 __pycache__/
